@@ -1,8 +1,6 @@
 package com.test;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +12,22 @@ public class Main {
         for(Object o:collection){
             System.out.println(o);
         }
+        List<Parent> parentList = new ArrayList<>() ;
+        parentList.add(new Child());
+        for (Parent p:
+             parentList) {
+            p.Introduce();
+        }
+    }
+}
+class Parent{
+    public void Introduce(){
+        System.out.println("Parent");
+    }
+}
+class  Child extends Parent{
+    @Override
+    public void Introduce(){
+        System.out.println("Child");
     }
 }
