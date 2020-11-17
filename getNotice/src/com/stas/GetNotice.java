@@ -46,7 +46,7 @@ public class GetNotice {
         if(!file.exists()){
             OutputStream outputStream = new FileOutputStream(file);
             outputStream.write(bytes);
-            outputStream.flush();
+         //   outputStream.flush();
             outputStream.close();
         }
 
